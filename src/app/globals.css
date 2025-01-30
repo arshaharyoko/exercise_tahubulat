@@ -34,6 +34,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Animations */
 @keyframes scroll-right {
   0% {
     transform: translateX(0%);
@@ -52,12 +53,12 @@ body {
 }
 @media (min-width: 1024px) {
   .animate-scroll-right {
-    animation: scroll-right 10s linear infinite !important;
+    animation: scroll-right 30s linear infinite !important;
   }
 }
 
 .animate-scroll-top {
-  animation: scroll-top 10s linear infinite;
+  animation: scroll-top 30s linear infinite;
 }
 
 /* Select element styles */
