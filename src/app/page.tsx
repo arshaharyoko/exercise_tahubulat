@@ -173,7 +173,7 @@ export default function Home() {
             </div>
             <div className="relative flex flex-col w-full h-full justify-end overflow-hidden">
                 <div className="absolute bg-gradient-to-b lg:bg-gradient-to-r from-orange-200 to-10% size-full z-10"/>
-                <div className="absolute left-0 lg:top-0 pt-0 sm:pt-[calc(10vh)] md:pt-[calc(15vh)] w-full">
+                <div className="absolute top-0 lg:left-0 pt-0 sm:pt-[calc(10vh)] md:pt-[calc(15vh)] w-full">
                     <div className="grid grid-flow-row lg:grid-flow-col gap-4 animate-scroll-top animate-scroll-right">
                         {reviewElements}
                     </div>
