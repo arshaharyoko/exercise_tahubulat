@@ -34,16 +34,16 @@ export default function Catalog() {
     }, []);
 
     return (
-        <div className="flex flex-row mt-8 md:mt-6 lg:mt-4 overflow-scroll">
+        <div className="flex flex-row mt-8 md:mt-6 lg:mt-4 h-[calc(90vh)] overflow-scroll">
             {logged==="admin" && 
-                <div className="h-full">
+                <div>
                     <Link href="/catalog_modify"><svg className="w-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg></Link>
                 </div>
             }
             {catalog.length!==0 ? (
-                <div className="grid gap-x-1 gap-y-4 mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="grid gap-x-1 gap-y-4 mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 h-fit">
                     {catalog.map((item) => (
-                        <div key={item.id} className="flex flex-col p-4 border-2 border-solid border-black min-w-44 max-w-52 min-h-36 max-h-52 md:min-w-64 md:max-w-72 md:min-h-56 md:max-h-72 text-2xl">
+                        <div key={item.id} className="relative flex flex-col p-4 border-2 border-solid border-black min-w-44 max-w-52 min-h-52 max-h-64 md:min-w-64 md:max-w-72 md:min-h-56 md:max-h-72 text-xl">
                             <Image
                                 src={item?.thumbnail ? item.thumbnail : "/favicon.ico"}
                                 alt="Thumbnail"
@@ -53,7 +53,7 @@ export default function Catalog() {
                             />
                             <span>{item.name}</span>
                             <hr className="border-black border-dashed border-2" />
-                            <span className="h-screen overflow-hidden">{item.description}</span>
+                            <span className="h-screen overflow-scroll">{item.description}</span>
                             <div className="grid grid-flow-col w-full">
                                 <span>{item.price}</span>
                                 {logged==="admin" &&

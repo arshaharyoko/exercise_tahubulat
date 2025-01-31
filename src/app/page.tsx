@@ -143,7 +143,7 @@ export default function Home() {
     }, []);
 
     return (
-    <div className="flex flex-row justify-center my-32 sm:my-8 md:my-0 h-[calc(80vh)] items-center">
+    <div className="flex flex-row justify-center my-20 sm:my-8 md:my-0 h-[calc(80vh)] items-center">
         <div className="flex flex-col w-full h-full mr-12 sm:mr-24 md:mr-32">
             <div className="grid grid-flow-col grid-rows-2 gap-4 w-full h-full">
                 <div className="relative border-2 border-dashed border-black overflow-hidden">
