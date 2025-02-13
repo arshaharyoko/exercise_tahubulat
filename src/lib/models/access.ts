@@ -42,7 +42,7 @@ export async function login(formData: FormData) {
     const pwd = formData.get("pwd") as string;
     const user = await sql`SELECT * FROM users WHERE email = ${email}`;
     
-    if(user.length===1) {
+    if(Object.keys(user[0]).length===0) {
         const hash = pbkdf2Sync(pwd, user[0].salt, 8192, 64, "sha512").toString("hex");
         if(user[0].hash===hash) {
             const cookieStore = await cookies();
